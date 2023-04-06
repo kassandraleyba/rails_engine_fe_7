@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe MerchantService do
   context "instance methods" do
     context "#all_merchants" do
-      it "returns merchant data", :vcr do
+      it "returns all merchants data", :vcr do
         VCR.use_cassette("all_merchants") do
           merchant_data = MerchantService.new.all_merchants
         
